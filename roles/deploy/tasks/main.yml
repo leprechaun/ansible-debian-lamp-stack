@@ -1,0 +1,2 @@
+- include: deploy.yml host=github-tests.local repo=http://github.com/leprechaun/github-tests.git version={{branch}}
+- include: deploy.yml host=leprechaun.github.local repo=http://github.com/leprechaun/leprechaun.github.com.git version={{branch}}
