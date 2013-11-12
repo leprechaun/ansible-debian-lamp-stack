@@ -6,3 +6,4 @@
 
 [all:vars]
 branch = master
+env = prod

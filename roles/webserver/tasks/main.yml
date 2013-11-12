@@ -5,3 +5,5 @@
     - php5
     - php5-mysql
     - php5-memcache
+
+- include: vhost host=github-tests.local aliases=['www.github-tests.local']

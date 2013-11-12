@@ -1,0 +1,25 @@
+- name: Deploy WebApp
+  hosts: webservers
+  user: root
+  roles:
+    - { role: deploy,
+        host: github-tests.local,
+        repo: "https://github.com/leprechaun/github-tests.git",
+        version: "{{branch}}",
+        tags: [ 'github-tests.local' ]
+    }
+
+    - { role: deploy,
+        host: leprechaun.github.local,
+        repo: "https://github.com/leprechaun/leprechaun.github.com.git",
+        version: "{{branch}}",
+        tags: [ 'leprechaun.github.local' ]
+    }
+
+    - { role: deploy,
+        host: angularstaticgallery.local,
+        repo: "https://github.com/leprechaun/AngularStaticGallery.git",
+        version: "{{branch}}",
+        tags: [ 'github-tests.local' ]
+    }
+

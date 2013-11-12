@@ -4,9 +4,6 @@
     - vhost.{{host}}.j2
     - vhost.j2
 
-- name: Checkout code ({{repo}})
-  git: repo={{repo}} dest=/var/www/{{host}}
-
 - name: Enable VirtualHost ({{host}})
   debian_apache2: option=site name={{host}} state=enabled
   notify:

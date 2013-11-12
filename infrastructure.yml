@@ -15,9 +15,3 @@
   user: root
   roles:
     - webserver
-
-- name: Deploy Application
-  hosts: webservers
-  user: root
-  roles:
-    - deploy

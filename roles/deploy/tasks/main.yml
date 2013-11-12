@@ -1,2 +1,5 @@
-- include: deploy.yml host=github-tests.local repo=http://github.com/leprechaun/github-tests.git version={{branch}}
-- include: deploy.yml host=leprechaun.github.local repo=http://github.com/leprechaun/leprechaun.github.com.git version={{branch}}
+- name: Checkout code ({{repo}})
+  git: repo={{repo}} dest=/var/www/{{host}} version={{branch}}
+
+- name: Change ownership of files
+  file: path=/var/www/{{host}} recurse=true owner=www-data group=www-data
